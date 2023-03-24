@@ -1,0 +1,11 @@
+<!--Begin Code - @NavyaS-->
+<sly data-sly-test="${(wcmmode.edit || wcmmode.design)}">
+    <div class="cq-placeholder" data-emptyText="Please author ${component.title}"></div>
+</sly>
+<div data-sly-use.model="com.anf.core.models.SearchPropertyModel" data-sly-test="${model.searchResult}">
+    <h1>Search Results</h1>
+    <sly data-sly-list.child="${model.searchResult}">
+        <p><a href="${child.path @ extension = 'html'}">${child.title}</a></p>
+    </sly>
+</div>
+<!--End Code-->

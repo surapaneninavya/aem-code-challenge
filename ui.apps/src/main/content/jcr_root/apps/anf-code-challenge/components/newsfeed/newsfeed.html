@@ -1,0 +1,20 @@
+<!--Begin Code - @NavyaS-->
+<div class="news-feeds" data-sly-use.model="com.anf.core.models.NewsFeedModel"}>
+    <sly data-sly-list.child="${model.newsFeed}">
+        <div class="news-feed-data">
+            <a class="news-feed-link" href="${child.url}">
+                <div class="news-feed-image">
+                    <img class="news-feed-image-url" src=" ${child.urlImage}" alt="${child.title}">
+                </div>
+                <div class="news-feed-data">
+                    <h1 class="news-feed-title">${child.title}</h1>
+                    <p class="news-feed-author">By ${child.author}</p>
+                    <p class="news-feed-content">${child.content @context='html'}</p>
+                    <p class="news-feed-description"> ${child.description @context='html'}</p>
+                </div>
+
+            </a>
+        </div>
+    </sly>
+</div>
+<!--End Code-->

@@ -1,0 +1,21 @@
+.successfully_submitted{
+     display:none;
+     animation: blinker 1.5s linear infinite;
+     color: green;
+}
+ .submission_failed{
+     display:none;
+     animation: blinker 1.5s linear infinite;
+     color: red;
+}
+.age-error{
+ 	 display:none;
+     animation: blinker 1.5s linear infinite;
+     color: red;
+}
+ @keyframes blinker {
+     50% {
+         opacity: 0;
+    }
+}
+
